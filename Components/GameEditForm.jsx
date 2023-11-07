@@ -1,12 +1,8 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
 
 export default function GameEditForm() {
   return (
-    <View>
-      <Text>GameEditForm</Text>
-    </View>
+    <div>
+      <h1>GameEditForm</h1>
+    </div>
   )
 }
-
-const styles = StyleSheet.create({})

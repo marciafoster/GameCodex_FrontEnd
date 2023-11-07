@@ -1,5 +1,4 @@
-import React from 'react'
-import GameEditForm from "../Components/GameEditForm"
+import GameEditForm from '../GameEditForm'
 
 function Edit() {
   return (

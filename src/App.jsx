@@ -2,14 +2,14 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 
-import Edit from "./Pages/Edit";
-import FourOFour from "./Pages/FourOFour";
-import Home from "./Pages/Home";
-import Index from "./Pages/Index";
-import New from "./Pages/New";
-import Show from "./Pages/Show";
+import Edit from '../Components/Pages/Edit';
+import FourOFour from "../Components/Pages/FourOFour";
+import Home from '../Components/Pages/Home';
+import Index from "../Components/Pages/Index";
+import New from "../Components/Pages/New";
+import Show from "../Components/Pages/Show";
 
-import NavBar from "./Components/NavBar";
+import NavBar from '../Components/NavBar'
 function App() {
   return (
     <div className="App">
