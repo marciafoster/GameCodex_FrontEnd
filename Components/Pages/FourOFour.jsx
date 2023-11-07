@@ -1,12 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export default function FourOFour() {
-  return (
-    <View>
-      <Text>FourOFour</Text>
-    </View>
+function FourOFour() {
+  return(
+    <div>
+    <h1>"Page Not Found"</h1>
+    </div>
   )
 }
 
-const styles = StyleSheet.create({})
+export default FourOFour
