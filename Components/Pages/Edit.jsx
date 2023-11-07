@@ -1,12 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import GameEditForm from "../Components/GameEditForm"
 
-export default function Edit() {
+function Edit() {
   return (
-    <View>
-      <Text>Edit</Text>
-    </View>
+   <div className="New Edit">
+    <h2>Edit</h2>
+    <GameEditForm />
+    </div>
   )
 }
 
-const styles = StyleSheet.create({})
+
+export default Edit

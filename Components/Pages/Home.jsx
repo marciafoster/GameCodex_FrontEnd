@@ -1,12 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export default function Home() {
-  return (
-    <View>
-      <Text>Home</Text>
-    </View>
+function Home() {
+  return(
+    <div className="Home">
+    <h2>Welcome To GameCodex!</h2>
+    <h3>Browse and select games from popular gaming consoles such as Xbox, PlayStation, and Nintendo. </h3>
+    </div>
   )
 }
 
-const styles = StyleSheet.create({})
+export default Home;
+

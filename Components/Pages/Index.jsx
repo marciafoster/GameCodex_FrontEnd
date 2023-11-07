@@ -1,12 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export default function Index() {
+function Index() {
   return (
-    <View>
-      <Text>Index</Text>
-    </View>
+    <div className="Index">
+      <h2>Index</h2>
+      <Games />
+
+    </div>
   )
 }
 
-const styles = StyleSheet.create({})
+
+export default Index;
