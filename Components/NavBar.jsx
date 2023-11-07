@@ -1,12 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
-    <View>
-      <Text>NavBar</Text>
-    </View>
-  )
+    <nav>
+      <h1>
+        <Link to="/games">GameCodex</Link>
+      </h1>
+      <button>
+        <Link to="/games/new">New Game</Link>
+      </button>
+      <p>THIS IS THE NAV BAR!!!</p>
+    </nav>
+  );
 }
-
-const styles = StyleSheet.create({})
