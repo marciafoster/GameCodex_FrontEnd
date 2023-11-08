@@ -1,12 +1,10 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+
 
 export default function Game() {
   return (
-    <View>
-      <Text>Game</Text>
-    </View>
+    <div>
+      <h1>Game</h1>
+    </div>
   )
 }
 
-const styles = StyleSheet.create({})
