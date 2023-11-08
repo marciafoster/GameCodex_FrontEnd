@@ -1,8 +1,12 @@
-export default function Show() {
-    return (
-      <>
-        <div className="show-page"></div>
-      </>
-    );
-  }
-  
+import GameDetails from "../GameDetails"
+
+function Show() {
+  return (
+    <div className="Show">
+      <h2>Show</h2>
+      <GameDetails />
+    </div>
+  );
+}
+
+export default Show;
