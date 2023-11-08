@@ -1,0 +1,14 @@
+.game-container{
+    display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(2, 1fr);    
+  gap: 10px;
+}
+.game-card{
+    border: 1px solid black;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
