@@ -1,0 +1,82 @@
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.game-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+}
+
+.game-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-img img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.game-description {
+  padding: 10px;
+}
+
+/* GameDetails.css */
+.game-details {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.game-details-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  /* cursor: pointer; */
+}
+
+.game-details-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-details-img img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.game-details-description {
+  padding: 10px;
+}
+
+.game-details-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-top: 1px solid #ddd;
+}
+
+/* Button styles */
+.game-details-buttons button {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 10px;
+  /* cursor: pointer; */
+  border-radius: 4px;
+}
+
+.game-details-buttons button:hover {
+  background-color: #777;
+}
