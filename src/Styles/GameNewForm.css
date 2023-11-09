@@ -1,0 +1,47 @@
+.NewFormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .GameForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 300px;
+    background-color: #f7f7f7;
+  }
+  
+  .FormField {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column; 
+  }
+  
+  .FormField label {
+    margin-bottom: 3px; 
+  }
+  
+  .FormField input {
+    width: 100%; 
+  }
+  
+  button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+
+   

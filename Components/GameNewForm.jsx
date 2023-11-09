@@ -1,10 +1,12 @@
 
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import "../src/Styles/GameNewForm.css"
 
 const API = import.meta.env.VITE_API_URL;
 
 function GameNewForm() {
+  
   const navigate = useNavigate();
   const [game, setGame] = useState({
     name: "",
@@ -37,7 +39,7 @@ function GameNewForm() {
         .then(res => res.json())
         .then(() => navigate('/games'))
     } catch (error) {
-      console.error('Error:', error);
+      return error
     }
   };
 
@@ -55,7 +57,7 @@ function GameNewForm() {
   };
 
   return (
-    <div className="New">
+    <div className="NewFormContainer">
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input
@@ -67,6 +69,7 @@ function GameNewForm() {
           required
         />
 
+        <div className="FormField">
         <label htmlFor="release_year">Release Year:</label>
         <input
           id="release_year"
@@ -76,7 +79,9 @@ function GameNewForm() {
           placeholder="Release Year"
           required
         />
+        </div>
 
+        <div className="FormField">
         <label htmlFor="genre">Genre:</label>
         <input
           id="genre"
@@ -85,7 +90,9 @@ function GameNewForm() {
           onChange={handleTextChange}
           placeholder="Genre"
         />
+        </div>
 
+        <div className="FormField">
         <label htmlFor="rating">Rating:</label>
         <input
           id="rating"
@@ -95,7 +102,9 @@ function GameNewForm() {
           placeholder="Rating"
           required
         />
+        </div>
 
+        <div className="FormField">
         <label htmlFor="game_studio">Game Studio:</label>
         <input
           id="game_studio"
@@ -104,7 +113,9 @@ function GameNewForm() {
           onChange={handleTextChange}
           placeholder="Game Studio"
         />
+        </div>
 
+        <div className="FormField">
         <label htmlFor="system">System:</label>
         <input
           id="system"
@@ -113,7 +124,9 @@ function GameNewForm() {
           onChange={handleTextChange}
           placeholder="System"
         />
+        </div>
 
+        <div className="FormField">
         <label htmlFor="discontinued">Discontinued:</label>
         <input
           id="discontinued"
@@ -121,6 +134,7 @@ function GameNewForm() {
           onChange={handleCheckboxChange}
           checked={game.discontinued}
         />
+        </div>
         <br />
         <br />
         <button type="submit">Submit</button>
