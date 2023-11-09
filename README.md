@@ -32,7 +32,7 @@ GameCodex is a full-stack web application that provides a platform for gamers to
   - Database (PostgreSQL)
   
 - **Deployment:**
-  - Frontend -
+  - Frontend - https://gamecodex.netlify.app/
   - Backend - https://gamecodex.onrender.com/
 
 ## Getting Started
