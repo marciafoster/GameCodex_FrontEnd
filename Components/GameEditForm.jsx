@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 
+import "../src/Styles/GameEdit.css";
+
 const API = import.meta.env.VITE_API_URL;
 
 export default function GameEditForm() {
@@ -137,7 +139,7 @@ export default function GameEditForm() {
         <button type="submit">Submit</button>
       </form>
       <br />
-      <Link to={`/games/${index}`}>
+      <Link to={`/games/${index}`} className="Link-button">
         <button>Back</button>
       </Link>
     </div>

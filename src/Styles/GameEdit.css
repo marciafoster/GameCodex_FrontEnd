@@ -1,0 +1,51 @@
+/* Edit form styles */
+.Edit {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .edit-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  label {
+    margin-bottom: 8px;
+  }
+  
+  input {
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+  
+  button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px;
+  }
+  
+  button:hover {
+    background-color: #777;
+  }
+  
+  /* Back button style */
+  .Link-button {
+    margin-top: 20px;
+  }
+  
+  .Link-button button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px;
+  }
+  
+  .Link-button button:hover {
+    background-color: #777;
+  }
+  

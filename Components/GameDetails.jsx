@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import "../src/Styles/Game.css";
+
 import Game from "./Game";
 
 const API = import.meta.env.VITE_API_URL;
@@ -43,29 +45,49 @@ export default function GameDetails() {
   return (
     <div className="game-details">
       <h1>GameDetails</h1>
-      <div className="game-card">
-        <div>
+      <div className="game-details-card">
+        <div className="game-details-img">
           <img
             src="https://m.media-amazon.com/images/I/71rmY66nqoL._AC_UF1000,1000_QL80_.jpg"
             alt="{}"
           />
         </div>
-        <div>
-          <h3>{game.name}</h3>
-          <p>{game.release_year}</p>
-          <p>{game.genre}</p>
-          <p>{game.rating}</p>
+        <div className="game-details-description">
+          <h3>
+            Name: <br />
+            {game.name}
+          </h3>
+          <p>
+            Release Year: <br />
+            {game.release_year}
+          </p>
+          <p>
+            Genre: <br />
+            {game.genre}
+          </p>
+          <p>
+            Rating: <br />
+            {game.rating}
+          </p>
           <p>{game.discontinued}</p>
-          <p>{game.game_studio}</p>
-          <p>{game.system}</p>
+          <p>
+            Studio: <br />
+            {game.game_studio}
+          </p>
+          <p>
+            System: <br />
+            {game.system}
+          </p>
         </div>
-        <Link to={`/games`}>
-          <button>Back</button>
-        </Link>
-        <Link to={`/games/${index}/edit`}>
-          <button>Edit</button>
-        </Link>
-        <button onClick={confirmDelete}>Delete</button>
+        <div className="game-details-buttons">
+          <Link to={`/games`}>
+            <button>Back</button>
+          </Link>
+          <Link to={`/games/${index}/edit`}>
+            <button>Edit</button>
+          </Link>
+          <button onClick={confirmDelete}>Delete</button>
+        </div>
       </div>
     </div>
   );

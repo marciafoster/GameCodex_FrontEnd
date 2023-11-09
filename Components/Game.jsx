@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../src/Styles/Game.css";
 
 export default function Game({ game }) {
   return (
