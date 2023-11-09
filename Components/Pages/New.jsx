@@ -1,7 +1,12 @@
-export default function New() {
+import GameNewForm from "../GameNewForm";
+
+function New() {
   return (
-    <>
-      <div className="new-page"></div>
-    </>
+    <div className="New">
+      <h2>New</h2>
+      <GameNewForm />
+    </div>
   );
 }
+
+export default New;
