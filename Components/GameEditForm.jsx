@@ -41,19 +41,19 @@ export default function GameEditForm() {
   };
 
   useEffect(() => {
-    fetch(`${API}/colors/${index}`)
+    fetch(`${API}/games/${index}`)
       .then((res) => res.json())
-      .then((res) => setColor(res));
+      .then((res) => setGame(res));
   }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    updateColor();
+    updateGame();
   };
 
   return (
     <div className="Edit">
-      <form onSubmit={handleSubmit}>
+      <form className="edit-form" onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input
           id="name"
@@ -63,6 +63,8 @@ export default function GameEditForm() {
           placeholder="Name of Game"
           required
         />
+
+        <br />
 
         <label htmlFor="release_year">Release Year:</label>
         <input
@@ -74,6 +76,8 @@ export default function GameEditForm() {
           required
         />
 
+        <br />
+
         <label htmlFor="genre">Genre:</label>
         <input
           id="genre"
@@ -83,6 +87,8 @@ export default function GameEditForm() {
           placeholder="Game Genre"
           required
         />
+
+        <br />
 
         <label htmlFor="rating">Rating:</label>
         <input
@@ -94,13 +100,7 @@ export default function GameEditForm() {
           required
         />
 
-        <label htmlFor="discontinued">Discontinued:</label>
-        <input
-          id="discontinued"
-          type="checkbox"
-          onChange={handleCheckboxChange}
-          checked={game.discontinued}
-        />
+        <br />
 
         <label htmlFor="game_studio">Game Studio:</label>
         <input
@@ -111,6 +111,8 @@ export default function GameEditForm() {
           placeholder="game_studio of Game"
           required
         />
+
+        <br />
 
         <label htmlFor="system">System:</label>
         <input
@@ -123,7 +125,15 @@ export default function GameEditForm() {
         />
 
         <br />
-        <br />
+
+        <label htmlFor="discontinued">Discontinued:</label>
+        <input
+          id="discontinued"
+          type="checkbox"
+          onChange={handleCheckboxChange}
+          checked={game.discontinued}
+        />
+        <br/>
         <button type="submit">Submit</button>
       </form>
       <br />
