@@ -1,10 +1,13 @@
 import GameNewForm from "../GameNewForm";
 
-export default function New() {
+
+function New() {
   return (
-      <div className="New">
-        <h2>New</h2>
-        <GameNewForm/>
-      </div>
+    <div className="New">
+      <h2>New</h2>
+      <GameNewForm />
+    </div>
   );
 }
+
+export default New;
