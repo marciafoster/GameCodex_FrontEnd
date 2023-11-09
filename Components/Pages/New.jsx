@@ -1,5 +1,6 @@
 import GameNewForm from "../GameNewForm";
 
+
 function New() {
   return (
     <div className="New">

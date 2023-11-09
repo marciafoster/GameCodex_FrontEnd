@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import Game from "./Game";
 
 const API = import.meta.env.VITE_API_URL;
 
 export default function GameDetails() {
   const [game, setGame] = useState([]);
+  let navigate = useNavigate();
   let { index } = useParams();
 
   const fetchData = async () => {
@@ -13,7 +15,7 @@ export default function GameDetails() {
         .then((res) => res.json())
         .then((res) => {
           setGame(res);
-          console.log(res);
+          // console.log(res);
         });
     } catch (error) {
       console.error(error);
@@ -21,10 +23,22 @@ export default function GameDetails() {
     }
   };
 
-  // Displaying one games
+  // Displaying one game
   useEffect(() => {
     fetchData();
   }, [index]);
+
+  const handleDelete = () => {
+    fetch(`${API}/games/${index}`, {
+      method: "Delete",
+    }).then(() => navigate("/games"));
+  };
+
+  const confirmDelete = () => {
+    if(window.confirm("Are you sure you want to delete this game?")){
+      handleDelete();
+    }
+  }
 
   return (
     <div className="game-details">
@@ -41,6 +55,13 @@ export default function GameDetails() {
         <p>{game.discontinued}</p>
         <p>{game.game_studio}</p>
         <p>{game.system}</p>
+        <Link to={`/games`}>
+        <button>Back</button>
+        </Link>
+        <Link to={`/games/${index}/edit`}>
+          <button>Edit</button>
+        </Link>
+        <button onClick={confirmDelete}>Delete</button>
       </div>
     </div>
   );
